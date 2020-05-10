@@ -1,0 +1,69 @@
+@import "~@angular/material/theming";
+
+@include mat-core();
+
+$primary: mat-palette($mat-indigo);
+$accent: mat-palette($mat-pink, A200, A100, A400);
+$warn: mat-palette($mat-red);
+$theme: mat-light-theme($primary, $accent, $warn);
+
+@include angular-material-theme($theme);
+
+// Our dark theme
+.dark-theme {
+    color: $light-primary-text;
+    $dark-primary: mat-palette($mat-yellow);
+    $dark-accent: mat-palette($mat-amber, A400, A100, A700);
+    $dark-warn: mat-palette($mat-red);
+    $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+  
+    @include angular-material-theme($dark-theme);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+  }
+.light-theme{
+    @include angular-material-theme($theme);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+$my-theme-primary: mat-palette($mat-cyan);
+$my-theme-accent: mat-palette($mat-green);
+$my-theme-warn: mat-palette($mat-red);
+
+$my-theme: mat-light-theme(
+    $my-theme-primary,
+    $my-theme-accent,
+    $my-theme-warn
+);
+
+$my-second-theme-primary: mat-palette($mat-purple);
+$my-second-theme-accent: mat-palette($mat-pink);
+$my-second-theme-warn: mat-palette($mat-yellow);
+
+$my-second-theme: mat-dark-theme(
+    $my-second-theme-primary,
+    $my-second-theme-accent,
+    $my-second-theme-warn
+);
+.my-theme{
+    @include angular-material-theme($my-theme);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+.my-second-theme{
+    @include angular-material-theme($my-second-theme);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}

@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./app/themes/material-theme.scss";
+
+html,body {
+    height: 100%;
+    font-family: Lato;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .user-header-image {
+    background-image: url('assets/new.png');
+    background-size: cover;
+    
+  }
+  .fill-space {
+    flex: 1 1 auto;
+  }
