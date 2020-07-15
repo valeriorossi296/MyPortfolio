@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PictureCard } from '../models/card';
 import { PictureCardService } from '../services/card.service';
 import { Subscription } from 'rxjs';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +15,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private pictureCardService: PictureCardService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -21,5 +23,13 @@ export class HomeComponent implements OnInit {
     this.pictureCardService.getAllCards().subscribe(p => this.pictureCards = p);
    
   }
-
+  navigatePicture()
+  {
+    this.router.navigate(['pictures']);
+  }
+  navigateFurniture()
+  {
+    this.router.navigate(['furnitures']);
+  }
+  
 }

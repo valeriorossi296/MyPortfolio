@@ -11,6 +11,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { ThemeService} from './services/themeService.service';
 import { PictureCardComponent } from './picture-card/picture-card.component';
 import { FurnitureComponent } from './furniture/furniture.component';
+import { PictureCardListComponent } from './picture-card/picture-card-list/picture-card-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { FurnitureComponent } from './furniture/furniture.component';
     HeaderComponent,
     FooterComponent,
     PictureCardComponent,
-    FurnitureComponent
+    FurnitureComponent,
+    PictureCardListComponent
   ],
   imports: [
     BrowserModule,

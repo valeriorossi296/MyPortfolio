@@ -5,6 +5,7 @@
 $primary: mat-palette($mat-indigo);
 $accent: mat-palette($mat-pink, A200, A100, A400);
 $warn: mat-palette($mat-red);
+//default them is light
 $theme: mat-light-theme($primary, $accent, $warn);
 
 @include angular-material-theme($theme);
@@ -12,9 +13,9 @@ $theme: mat-light-theme($primary, $accent, $warn);
 // Our dark theme
 .dark-theme {
     color: $light-primary-text;
-    $dark-primary: mat-palette($mat-yellow);
-    $dark-accent: mat-palette($mat-amber, A400, A100, A700);
-    $dark-warn: mat-palette($mat-red);
+    $dark-primary: mat-palette($mat-orange);
+    $dark-accent: mat-palette($mat-blue-grey, A400, A100, A700);
+    $dark-warn: mat-palette($mat-blue-grey);
     $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
   
     @include angular-material-theme($dark-theme);
